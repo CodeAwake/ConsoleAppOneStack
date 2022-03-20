@@ -1,0 +1,13 @@
+﻿@model StepThree.Models.TextAreaBoxClass
+@{
+    ViewBag.Title = "Post";
+}
+
+<h2>Post</h2>
+
+@using (Html.BeginForm())
+            {
+                @Html.LabelFor(model=>model.Description)
+                @Html.TextAreaFor(model=>model.Description)
+                <input type="submit" value="Post"/>
+            }

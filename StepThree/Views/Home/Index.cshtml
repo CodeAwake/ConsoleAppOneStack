@@ -1,0 +1,27 @@
+﻿@model IEnumerable<StepThree.Models.TextAreaBoxClass>
+@{
+    ViewBag.Title = "Home Page";
+}
+<table>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.ID)</td>
+            <td> @Html.DisplayFor(modelitem => item.ID)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Description)</td>
+            <td>@Html.DisplayFor(modelitem=>item.Description)</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Detail", "Detail", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+
+
+    }
+</table>

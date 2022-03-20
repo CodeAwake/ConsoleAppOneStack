@@ -1,0 +1,13 @@
+﻿@model WebApplicationImageUpload.Models.ImageModel
+
+
+@using (Html.BeginForm("UploadedFiles","FileUpload",FormMethod.Post,new {enctype="multipart/form-data" }))
+            {
+            <div class="form-horizontal">
+                @Html.LabelFor(model=>model.file)
+                @Html.EditorFor(model=>model.file,Model.file,new {@class="form-control" ,@type="file" })
+                <input type="submit" value="Upload" />
+                </div>
+
+            }
+

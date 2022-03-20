@@ -1,0 +1,18 @@
+﻿@model StepThree.Models.TextAreaBoxClass
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+<table>
+ <tr>
+     <td>@Html.DisplayNameFor(model=>model.ID)</td>
+     <td>@Html.DisplayFor(model=>model.ID)</td>
+ </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model=>model.Description)
+            @Html.DisplayFor(model=>model.Description)
+        </td>
+    </tr>
+</table>

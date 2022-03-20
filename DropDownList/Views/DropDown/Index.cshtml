@@ -1,0 +1,9 @@
+﻿@model DropDownList.Models.Subjects
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.LabelFor(model=>model.SubjectList)
+@Html.DropDownListFor(model=>model.SubjectList,Model.SubjectList)
+
